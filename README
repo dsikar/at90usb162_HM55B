@@ -1,0 +1,54 @@
+YAAC AT90USB162 HM55B
+
+I call the board I use a Yaac - Yet Another Arduino Clone.
+
+It's based on the AT90USB162. I'm looking at making cheap Arduinos
+and that was the first result.
+
+I've documented the Yacc on the London Hackspace Wiki, where it was
+developed:
+
+http://wiki.hackspace.org.uk/wiki/Projects/YAAC
+
+Steps for running sketches on the Yaac are described. It is based 
+primarily on the Teensy, another device based on the AT90USB162
+capable of running sketches.
+
+I use the dfu-programmer to burn hex code onto the device.
+	
+	*************
+	** CREDITS **
+	*************
+
+Code piggybacking on the:
+
+	1. teensyduino-0018
+	2. arduino-0018
+	3. teensy
+
+Original code written by kiilo, lifted from:
+
+http://www.arduino.cc/playground/Main/HM55B
+
+Original calibration routine in datasheet converted to C by Scott Ferguson, lifted from 
+
+http://www.societyofrobots.com/robotforum/index.php?topic=11392.0
+
+I made a minor modification to obtain the first and last elements
+of the raw and offsets arrays, this allows linear interpolation 
+for angles near +-180 degrees.
+
+	****************
+	** DATASHEETS **
+	****************
+
+AT90USB162
+
+http://www.atmel.com/dyn/resources/prod_documents/doc7707.pdf
+
+HM55B
+
+http://www.hobbyengineering.com/specs/PX-29123.pdf
+
+Daniel Sikar 01.01.2011 ~ onto the new decade.
+dsikar@gmail.com
